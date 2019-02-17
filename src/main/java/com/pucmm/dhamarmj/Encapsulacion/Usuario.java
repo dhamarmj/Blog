@@ -1,18 +1,27 @@
 package com.pucmm.dhamarmj.Encapsulacion;
 
 public class Usuario {
+    private int id;
     private String username;
     private String nombre;
     private String password;
-    private boolean administrator;
+    private boolean admin;
     private boolean autor;
 
-    public Usuario(String username, String nombre, String password, boolean administrator, boolean autor) {
+    public Usuario(String username, String nombre, String password, boolean admin, boolean autor) {
         this.username = username;
         this.nombre = nombre;
         this.password = password;
-        this.administrator = administrator;
+        this.admin = admin;
         this.autor = autor;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -39,12 +48,10 @@ public class Usuario {
         this.password = password;
     }
 
-    public boolean isAdministrator() {
-        return administrator;
-    }
+    public boolean isAdmin() { return admin; }
 
-    public void setAdministrator(boolean administrator) {
-        this.administrator = administrator;
+    public void setAdmin(boolean administrator) {
+        this.admin = administrator;
     }
 
     public boolean isAutor() {
