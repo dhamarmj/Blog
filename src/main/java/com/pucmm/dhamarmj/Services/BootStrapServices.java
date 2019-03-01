@@ -19,15 +19,19 @@ public class BootStrapServices {
                 "autor INT, articulo INT," +
                 "FOREIGN KEY(autor) REFERENCES Usuario(id)," +
                 "FOREIGN KEY(articulo) REFERENCES Articulo(id));";
-        String sql5="CREATE TABLE IF NOT EXISTS ArtEti(id INT PRIMARY KEY AUTO_INCREMENT, idetiqueta INT, idarticulo INT, " +
+        String sql5="CREATE TABLE IF NOT EXISTS ArticuloEtiqueta(id INT PRIMARY KEY AUTO_INCREMENT, idetiqueta INT, idarticulo INT, " +
                 "FOREIGN KEY(idarticulo) REFERENCES Articulo(id)," +
                 "FOREIGN KEY(idetiqueta) REFERENCES Etiqueta(id));";
+        String sql6="CREATE TABLE IF NOT EXISTS ArticuloComentario(id INT PRIMARY KEY AUTO_INCREMENT, idcomentario INT, idarticulo INT, " +
+                "FOREIGN KEY(idarticulo) REFERENCES Articulo(id)," +
+                "FOREIGN KEY(idcomentario) REFERENCES Comentario(id));";
 
         ExecuteQuery(bd, sql1, "Usuario");
         ExecuteQuery(bd, sql2, "Etiqueta");
         ExecuteQuery(bd, sql3, "Articulo");
         ExecuteQuery(bd, sql4,"Comentario");
-        ExecuteQuery(bd, sql5, "ArtEti");
+        ExecuteQuery(bd, sql5, "ArticuloEtiqueta");
+        ExecuteQuery(bd, sql5, "ArticuloComentario");
     }
 
     private static void ExecuteQuery(Sql2o bd, String sql1, String TableName) {
