@@ -20,4 +20,8 @@ dependencies {
     compile 'com.sparkjava:spark-template-freemarker:2.5.5'
     compile 'org.sql2o:sql2o:1.5.4'
     compile 'com.h2database:h2:1.4.194'
+    compile 'org.apache.cassandra:cassandra-all:0.8.1'
+    compile 'org.slf4j:slf4j-log4j12'
+    compile 'log4j:log4j'
+
 }

@@ -22,20 +22,20 @@
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Username</label>
-                        <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your username.">
+                        <input type="text" class="form-control" placeholder="Username" name="username" required data-validation-required-message="Please enter your username.">
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Password</label>
-                        <input type="password" class="form-control" placeholder="Password" id="pass" required data-validation-required-message="Please enter your email Password.">
+                        <input type="password" class="form-control" placeholder="Password" name="password" required data-validation-required-message="Please enter your email Password.">
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
-                        <input type="checkbox" name="remember" value="rememberUser"> Remember Me!<br>
+                        <input type="checkbox" name="remember" value="true"> Remember Me!<br>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>

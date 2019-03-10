@@ -25,7 +25,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/Home/">Home</a>
                 </li>
-               <#if usuario=="autor">
+               <#if usuario=="author">
                    <li class="nav-item">
                        <a class="nav-link" href="/Author/Compose/">Compose</a>
                    </li>
@@ -40,7 +40,7 @@
                     </li>
                 </#if>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Log Out</a>
+                    <a class="nav-link" href="/LogOut/">Log Out</a>
                 </li>
             </ul>
         </div>

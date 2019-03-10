@@ -1,22 +1,21 @@
 package com.pucmm.dhamarmj;
 
-import com.pucmm.dhamarmj.Encapsulacion.Usuario;
+import com.pucmm.dhamarmj.Services.Encryption;
 import com.pucmm.dhamarmj.Handlers.MainHandler;
 import com.pucmm.dhamarmj.Services.BootStrapServices;
-import com.pucmm.dhamarmj.Services.UsuarioServices;
-
-import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
         BootStrapServices.crearTablas();
 
-         new MainHandler().mainHandler();
+        // System.out.println(UsuarioServices.encryptPassword("admin"));
+        // System.out.println(UsuarioServices.encryptPassword("author"));
+        // System.out.println(UsuarioServices.encryptPassword("visitor"));
 
-//        UsuarioServices user = new UsuarioServices();
-//        user.startUsuarios();
-//        System.out.println(user.getUsuario().size());
+        new MainHandler().mainHandler();
+
+
     }
 }

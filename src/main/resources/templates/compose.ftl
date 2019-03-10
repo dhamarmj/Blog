@@ -18,25 +18,25 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-            <form name="sentMessage" id="contactForm" method="post" action="/Admin/saveArticle/">
+            <form name="sentMessage" id="contactForm" method="post" action="/saveArticle/">
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Title</label>
-                        <input type="text" class="form-control"  id="title" required data-validation-required-message="Please enter your name.">
+                        <input type="text" class="form-control"  name="title" required data-validation-required-message="Please enter your name.">
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Cuerpo</label>
-                        <textarea rows="5" class="form-control" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                        <textarea rows="5" class="form-control" name="body" required data-validation-required-message="Please enter a message."></textarea>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Etiquetas</label>
-                        <textarea rows="3" class="form-control" placeholder="Separadas por coma" id="etiquetas" data-validation-required-message="Please enter a message."></textarea>
+                        <textarea rows="3" class="form-control" placeholder="Separadas por coma" name="etiquetas" data-validation-required-message="Please enter a message."></textarea>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>

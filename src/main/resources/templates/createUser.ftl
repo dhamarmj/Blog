@@ -22,33 +22,33 @@
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Name</label>
-                        <input type="text" class="form-control"  id="name" required data-validation-required-message="Please enter your name.">
+                        <input type="text" class="form-control" name="name" required data-validation-required-message="Please enter your name.">
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Username</label>
-                        <input type="text" class="form-control" id="username" required data-validation-required-message="Please enter your username.">
+                        <input type="text" class="form-control" name="username" required data-validation-required-message="Please enter your username.">
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                         <label>Password</label>
-                        <input type="password" class="form-control" id="pass" required data-validation-required-message="Please enter your email Password.">
+                        <input type="password" class="form-control" name="pass" required data-validation-required-message="Please enter your email Password.">
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
-                        <input type="checkbox" name="adminVal" value="admin"> This User is <strong>Admin</strong><br>
+                        <input type="checkbox" name="adminVal" value="true"> This User is <strong>Admin</strong><br>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
-                        <input type="checkbox" name="authorVal" value="author"> This User is <strong>Author</strong><br>
+                        <input type="checkbox" name="authorVal" value="true"> This User is <strong>Author</strong><br>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
