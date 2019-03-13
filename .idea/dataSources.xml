@@ -7,5 +7,11 @@
       <jdbc-driver>org.h2.Driver</jdbc-driver>
       <jdbc-url>jdbc:h2:~/blog</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="blog [2]" uuid="588b8c20-a18f-4713-9fd2-55d56e9f72e1">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:~/blog</jdbc-url>
+    </data-source>
   </component>
 </project>

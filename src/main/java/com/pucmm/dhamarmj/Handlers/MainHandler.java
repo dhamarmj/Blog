@@ -33,7 +33,6 @@ public class MainHandler {
         startup();
 
     }
-    //MISSING: COOKIE CREATED AND SECURE PERO NO SE QUE HACER CON ELLA
 
     ArticuloServices articuloServices;
     ArticuloEtiquetaService articuloEtiquetaService;
@@ -57,13 +56,7 @@ public class MainHandler {
             Map<String, Object> attributes = new HashMap<>();
 
             List<Articulo> Articles = articuloServices.getArticulo();
-            for (Articulo a:
-                 Articles) {
-                System.out.println(a.getTitulo());
-            }
-            attributes.put("list", Articles);
-
-
+            LoadEtiquetas(Articles);
             String user = request.cookie("LoginU");
             if (user != null) {
                 String passw = encryption.Decrypt(request.cookie("LoginP"));
@@ -79,6 +72,7 @@ public class MainHandler {
                 attributes.put("usuario", "other");
                 attributes.put("userSigned", false);
             }
+            attributes.put("list", Articles);
             return new ModelAndView(attributes, "home.ftl");
         }, freeMarkerEngine);
 
@@ -157,8 +151,10 @@ public class MainHandler {
                     listE,
                     currentUser);
             Articulo a = articuloServices.crearArticulo(Art);
-            if(a != null)
+            if (a != null) {
                 saveEtiquetaArticulo(a, listE);
+            }
+
             response.redirect("/Home/");
             return null;
         }, freeMarkerEngine);
@@ -178,6 +174,7 @@ public class MainHandler {
         Session session = request.session(true);
         session.attribute("usuario", user);
     }
+
     private Usuario getSessionUsuario(Request request) {
         return request.session().attribute("usuario");
     }
@@ -195,8 +192,8 @@ public class MainHandler {
     }
 
     private List<Etiqueta> getEtiquetas(String values) {
-        if(values.equalsIgnoreCase(""))
-            return  null;
+        if (values.equalsIgnoreCase(""))
+            return null;
 
         List<Etiqueta> list = new ArrayList<>();
         Etiqueta E;
@@ -212,9 +209,26 @@ public class MainHandler {
     private void saveEtiquetaArticulo(Articulo art, List<Etiqueta> list) {
         for (Etiqueta e :
                 list) {
-            articuloEtiquetaService.crearArticuloEtiqueta(new ArticuloEtiqueta(art, e));
+            ArticuloEtiqueta ae = articuloEtiquetaService.crearArticuloEtiqueta(new ArticuloEtiqueta(art, e));
         }
     }
 
-
+    private void LoadEtiquetas(List<Articulo> ListArticles) {
+        List<ArticuloEtiqueta> ae;
+        List<Etiqueta> et;
+        for (Articulo article :
+                ListArticles) {
+            ae = articuloEtiquetaService.getArticuloEtiqueta(article);
+            if (ae == null || ae.size() == 0)
+                article.setListaEtiquetas(new ArrayList<>());
+            else {
+                et = new ArrayList<>();
+                for (ArticuloEtiqueta artEt :
+                        ae) {
+                    et.add(artEt.getEtiqueta());
+                }
+                article.setListaEtiquetas(et);
+            }
+        }
+    }
 }

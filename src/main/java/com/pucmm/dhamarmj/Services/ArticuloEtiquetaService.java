@@ -6,6 +6,7 @@ import com.pucmm.dhamarmj.Encapsulacion.Etiqueta;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ArticuloEtiquetaService {
@@ -31,6 +32,39 @@ public class ArticuloEtiquetaService {
             return AE;
         }
     }
+    public List<ArticuloEtiqueta> getArticuloEtiqueta(Articulo articulo) {
+        String sql = "select * from ArticuloEtiqueta where idarticulo=:idarticulo";
+        try (Connection con = db.open()) {
+            List<ArticuloEtiqueta> AE = con.createQuery(sql)
+                    .addParameter("idarticulo", articulo.getId())
+                    .executeAndFetch(ArticuloEtiqueta.class);
+            for (ArticuloEtiqueta ae :
+                    AE) {
+                ae.setEtiqueta(etiquetaServices.getEtiqueta(ae.getIdetiqueta()));
+                ae.setArticulo(articulo);
+            }
+            return AE;
+        } catch (Exception ex){
+            System.out.println("ERROR buscando ARTICULOETIQUETA: " + ex.getMessage());
+            return  null;
+        }
+    }
+    public List<ArticuloEtiqueta> getArticuloEtiqueta(int idarticulo) {
+        String sql = "select * from ArticuloEtiqueta where idarticulo=:idarticulo";
+        try (Connection con = db.open()) {
+            List<ArticuloEtiqueta> AE = con.createQuery(sql)
+                    .addParameter("idarticulo", idarticulo)
+                    .executeAndFetch(ArticuloEtiqueta.class);
+            for (ArticuloEtiqueta ae :
+                    AE) {
+                loadArticuloEtiqueta(ae);
+            }
+            return AE;
+        } catch (Exception ex){
+            System.out.println("ERROR buscando ARTICULOETIQUETA: " + ex.getMessage());
+            return  null;
+        }
+    }
 
     public ArticuloEtiqueta getArticuloEtiqueta(long a, long b) {
         String sql = "select * from ArticuloEtiqueta where idarticulo=:idarticulo and idetiqueta=:idetiqueta";
@@ -39,7 +73,8 @@ public class ArticuloEtiquetaService {
                     .addParameter("idarticulo", a)
                     .addParameter("idetiqueta", b)
                     .executeAndFetchFirst(ArticuloEtiqueta.class);
-            loadArticuloEtiqueta(ae);
+            if (ae != null)
+                loadArticuloEtiqueta(ae);
             return ae;
         }
     }
@@ -52,7 +87,7 @@ public class ArticuloEtiquetaService {
 
     public ArticuloEtiqueta crearArticuloEtiqueta(ArticuloEtiqueta articuloEtiqueta) {
         String sql = "insert into ArticuloEtiqueta (idarticulo, idetiqueta) values (:idarticulo, :idetiqueta)";
-        AE = getArticuloEtiqueta(articuloEtiqueta.getArticulo().getId(), articuloEtiqueta.getEtiqueta().getId());
+        ArticuloEtiqueta AE = getArticuloEtiqueta(articuloEtiqueta.getArticulo().getId(), articuloEtiqueta.getEtiqueta().getId());
         if (AE == null) {
             try (Connection con = db.open()) {
                 con.createQuery(sql)
@@ -60,13 +95,13 @@ public class ArticuloEtiquetaService {
                         .addParameter("idetiqueta", articuloEtiqueta.getEtiqueta().getId())
                         .executeUpdate();
                 AE = getArticuloEtiqueta(articuloEtiqueta.getArticulo().getId(), articuloEtiqueta.getEtiqueta().getId());
+                System.out.println("crear Articulo Etiqueta " + AE.getArticulo().getTitulo());
                 return AE;
             } catch (Exception ex) {
                 System.out.println("Insert ArticuloEtiqueta error: " + ex.getMessage());
                 return null;
             }
         } else {
-            System.out.println("NULL");
             return AE;
 
         }

@@ -8,36 +8,45 @@ public class Articulo {
 
     private long id;
     private String titulo;
-    private String cuerpo;
+    private String texto;
     private int autor;
     private Date fecha;
     private List<Comentario> listaComentarios;
     private List<Etiqueta> listaEtiquetas;
     private Usuario usuarioautor;
     private String teaser;
+    private String stringEtiqueta;
 
     public Articulo(String titulo, String cuerpo, Date fecha, List<Comentario> listaComentarios, List<Etiqueta> listaEtiquetas, Usuario user) {
         this.titulo = titulo;
-        this.cuerpo = cuerpo;
-        this.autor = autor;
+        this.texto = cuerpo;
         this.fecha = fecha;
         this.listaComentarios = listaComentarios;
         this.listaEtiquetas = listaEtiquetas;
         this.usuarioautor = user;
         this.autor = user.getId();
         startTeaser();
+        startEtiquetasString();
     }
 
-    public void startTeaser() {
-        if (cuerpo.length() > 160)
-            this.teaser = this.cuerpo.substring(0, 160);
+    public void startEtiquetasString() {
+        stringEtiqueta ="";
+        for (Etiqueta etiqueta:
+             listaEtiquetas) {
+            stringEtiqueta += etiqueta.getEtiqueta() + ", ";
+        }
+    }
+
+     public void startTeaser() {
+        if (texto.length() > 160)
+            this.teaser = this.texto.substring(0, 160);
         else
-            this.teaser = this.cuerpo;
+            this.teaser = this.texto;
     }
 
     public Articulo(String titulo, String cuerpo, Date fecha, Usuario user) {
         this.titulo = titulo;
-        this.cuerpo = cuerpo;
+        this.texto = cuerpo;
         this.autor = autor;
         this.fecha = fecha;
         this.listaComentarios = new ArrayList<>();
@@ -45,7 +54,16 @@ public class Articulo {
         this.usuarioautor = user;
         this.autor = usuarioautor.getId();
         startTeaser();
+        stringEtiqueta="";
     }
+    public String getStringEtiqueta() {
+        return stringEtiqueta;
+    }
+
+    public void setStringEtiqueta(String stringEtiqueta) {
+        this.stringEtiqueta = stringEtiqueta;
+    }
+
     public String getTeaser() {
         return teaser;
     }
@@ -85,12 +103,12 @@ public class Articulo {
         this.titulo = titulo;
     }
 
-    public String getCuerpo() {
-        return cuerpo;
+    public String getTexto() {
+        return texto;
     }
 
     public void setCuerpo(String cuerpo) {
-        this.cuerpo = cuerpo;
+        this.texto = cuerpo;
     }
 
     public int getAutor() {

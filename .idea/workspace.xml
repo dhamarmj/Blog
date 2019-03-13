@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/EtiquetaServices.java" line="50" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/EtiquetaServices.java" line="74" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8274b8d-95bc-41f0-9110-3f13db86b722" name="Default Changelist" comment="Front end almost done, fixing">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/ArticuloEtiqueta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloEtiquetaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/Encryption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/fileHashes/fileHashes.lock" afterDir="false" />
@@ -18,27 +14,20 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Encapsulacion/Articulo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Encapsulacion/Articulo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Handlers/MainHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Handlers/MainHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Services/ArticuloServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Services/ArticuloServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Services/BootStrapServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Services/BootStrapServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Services/EtiquetaServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Services/EtiquetaServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Services/UsuarioServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Services/UsuarioServices.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/Articulo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/Articulo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Handlers/MainHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Handlers/MainHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloEtiquetaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloEtiquetaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/BootStrapServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/BootStrapServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/EtiquetaServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/EtiquetaServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/UsuarioServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/UsuarioServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/compose.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/compose.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/createUser.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/createUser.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/navbar.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/navbar.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signIn.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signIn.ftl" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -70,21 +59,18 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="blog" type="feb32156:DbDataSourceImpl" />
+        <item name="blog [2]" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="blog [2]" type="feb32156:DbDataSourceImpl" />
         <item name="BLOG: database" type="2aa06773:H2ImplModel$Database" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="blog" type="feb32156:DbDataSourceImpl" />
+        <item name="blog [2]" type="feb32156:DbDataSourceImpl" />
         <item name="BLOG: database" type="2aa06773:H2ImplModel$Database" />
         <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="blog" type="feb32156:DbDataSourceImpl" />
-        <item name="BLOG: database" type="2aa06773:H2ImplModel$Database" />
-        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
-        <item name="ARTICULO: table" type="818c1b4a:H2ImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -129,7 +115,38 @@
     <favorites_list name="Blog" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="true" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Handlers/MainHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="564">
+              <caret line="79" column="45" lean-forward="true" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/resources/main/templates/home.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="40" column="70" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Encapsulacion/Articulo.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -144,7 +161,6 @@
       <find>navbar</find>
       <find>navbar-dar</find>
       <find>@</find>
-      <find>bg-dar</find>
       <find>registerUser</find>
       <find>t</find>
       <find>enc</find>
@@ -154,6 +170,20 @@
       <find>saveEtiquetaArticulo</find>
       <find>Not null</find>
       <find>not nu</find>
+      <find>bg-dar</find>
+      <find>cuerpo</find>
+      <find>s</find>
+      <find>System</find>
+      <find>Null</find>
+      <find>NULL</find>
+      <find>usua</find>
+      <find>etique</find>
+      <find>LoadEti</find>
+      <find>Loa</find>
+      <find>startEtiquetasString</find>
+      <find>syst</find>
+      <find>sys</find>
+      <find>system</find>
     </findStrings>
     <replaceStrings>
       <replace>cuerpo</replace>
@@ -169,7 +199,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/Usuario.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/Comentario.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ComentarioServices.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/Etiqueta.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/signupForm" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/GridForm" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/ColumnDisplay" />
@@ -184,25 +213,27 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/CreateUser.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/articleDetail.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloComentarioService.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/signIn.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/Encryption.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/Encryption.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/navbar.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/createUser.ftl" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/UsuarioServices.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/compose.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/ArticuloSinListas.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/BootStrapServices.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/ArticuloEtiqueta.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/Articulo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/EtiquetaServices.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloEtiquetaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloServices.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Handlers/MainHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/Etiqueta.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/Articulo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Handlers/MainHandler.java" />
+        <option value="$PROJECT_DIR$/build/resources/main/templates/home.ftl" />
       </list>
     </option>
   </component>
@@ -215,7 +246,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="width" value="978" />
-    <option name="height" value="1039" />
+    <option name="height" value="1041" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -225,8 +256,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,77 +268,90 @@
             <path>
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="pucmm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="pucmm" type="462c0819:PsiDirectoryNode" />
               <item name="dhamarmj" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="pucmm" type="462c0819:PsiDirectoryNode" />
               <item name="dhamarmj" type="462c0819:PsiDirectoryNode" />
               <item name="Encapsulacion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dhamarmj" type="462c0819:PsiDirectoryNode" />
-              <item name="Handlers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dhamarmj" type="462c0819:PsiDirectoryNode" />
-              <item name="Services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="publico" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -320,10 +364,10 @@
     <property name="DatabaseDriversLRU" value="h2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551914899952" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552518979388" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sparkjavaorm/build.gradle" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -336,11 +380,11 @@
       <recent name="C:\Users\DELL\IdeaProjects\Blog\src\main\resources\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dhamar\IdeaProjects\Blog\src\main\resources\publico" />
       <recent name="C:\Users\Lenin\IdeaProjects\Blog\src\main\resources\publico" />
       <recent name="C:\Users\Lenin\IdeaProjects\Blog\src\main\resources" />
       <recent name="C:\Users\Lenin\IdeaProjects\Blog\src\main\resources\templates" />
       <recent name="C:\Users\Lenin\IdeaProjects\Blog\src\main\resources\templates\public" />
-      <recent name="C:\Users\DELL\IdeaProjects\Blog\src\main\resources\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -394,6 +438,11 @@
       <workItem from="1550196527860" duration="30714000" />
       <workItem from="1550410420478" duration="3663000" />
       <workItem from="1551395071959" duration="65293000" />
+      <workItem from="1552251262117" duration="21856000" />
+      <workItem from="1552329241583" duration="2062000" />
+      <workItem from="1552417956592" duration="1303000" />
+      <workItem from="1552516786155" duration="1643000" />
+      <workItem from="1552519212604" duration="118000" />
     </task>
     <task id="LOCAL-00001" summary="Front End a un 80%">
       <created>1551410785747</created>
@@ -406,7 +455,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99670000" />
+    <option name="totallyTimeSpent" value="126652000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -418,32 +467,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989899" visible="true" weight="0.182861" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49506903" visible="true" weight="0.21440129" />
+      <window_info id="Designer" order="1" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Structure" order="5" sideWeight="0.5059289" side_tool="true" weight="0.25080907" />
       <window_info id="Favorites" order="6" sideWeight="0.5010101" side_tool="true" weight="0.182861" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49923548" weight="0.2788321" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.3941606" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3280142" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49923548" weight="0.20921986" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39007092" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32846716" />
-      <window_info anchor="bottom" id="Build" order="8" weight="0.27153283" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32846716" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.3280142" />
+      <window_info anchor="bottom" id="Build" order="8" weight="0.2712766" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.122340426" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50076455" side_tool="true" weight="0.3447099" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="13" visible="true" weight="0.27737227" />
-      <window_info anchor="right" id="Coverage" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.4787234" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Database" order="1" weight="0.21862349" />
+      <window_info anchor="right" id="Database" order="1" weight="0.25485438" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.24966262" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.32874617" />
@@ -452,6 +500,7 @@
       <window_info anchor="right" id="Gradle" order="7" weight="0.32874617" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16396761" />
@@ -496,126 +545,29 @@
     <MESSAGE value="Front End a un 80%" />
     <option name="LAST_COMMIT_MESSAGE" value="Front End a un 80%" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloEtiquetaService.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloEtiquetaService.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/logging/Logger.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/signup" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/signup" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/RowDisplay">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="36" selection-start-line="27" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/vendor/jquery/jquery.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/public/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="302">
-            <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/public/css/blog-home.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/publico/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/publico/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80478">
-          <caret line="4734" selection-start-line="4734" selection-end-line="4734" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ColumnDisplay">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/signupForm">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../demosql2o/gradlew">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/publico/jquery/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/LocalBootstrap.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/public/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/HomeP.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/public/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="6454" column="34" selection-start-line="6454" selection-start-column="34" selection-end-line="6454" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/homeNavAdmin">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/footer.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloComentarioService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/69be3037-8168-451a-b592-d989ccc52509/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/firstNav.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew.bat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -647,46 +599,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/DatabaseServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://69be3037-8168-451a-b592-d989ccc52509/database/BLOG/schema/PUBLIC/table/USUARIO">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://69be3037-8168-451a-b592-d989ccc52509/database/BLOG/schema/PUBLIC/table/USUARIO" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/createUser.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/UsuarioServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4750#4751#0" expanded="true" />
-            <element signature="e#4792#4793#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -704,44 +621,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/Etiqueta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#155#156#0" expanded="true" />
-            <element signature="e#195#196#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://69be3037-8168-451a-b592-d989ccc52509/database/BLOG/schema/PUBLIC/table/ETIQUETA">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/BootStrapServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/ArticuloSinListas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://69be3037-8168-451a-b592-d989ccc52509/database/BLOG/schema/PUBLIC/table/ETIQUETA" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/ArticuloSinListas.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ComentarioServices.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -754,37 +635,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/ArticuloEtiqueta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#311#312#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#473#474#0" expanded="true" />
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://69be3037-8168-451a-b592-d989ccc52509/database/BLOG/schema/PUBLIC/table/ARTICULO">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://69be3037-8168-451a-b592-d989ccc52509/database/BLOG/schema/PUBLIC/table/ARTICULOETIQUETA">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://69be3037-8168-451a-b592-d989ccc52509/database/BLOG/schema/PUBLIC/table/ARTICULO" />
+    <entry file="das://69be3037-8168-451a-b592-d989ccc52509/database/BLOG/schema/PUBLIC/table/ARTICULOETIQUETA" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/articleDetail.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -799,30 +651,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/publico/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="6453" column="10" lean-forward="true" selection-start-line="6453" selection-start-column="10" selection-end-line="6453" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/69be3037-8168-451a-b592-d989ccc52509/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/588b8c20-a18f-4713-9fd2-55d56e9f72e1/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://588b8c20-a18f-4713-9fd2-55d56e9f72e1/database/BLOG/schema/PUBLIC/table/USUARIO">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/DatabaseServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/BootStrapServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/EtiquetaServices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="37" column="42" lean-forward="true" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloEtiquetaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/Articulo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="-26">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -831,15 +700,170 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        <state relative-caret-position="122">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Handlers/MainHandler.java">
+    <entry file="das://588b8c20-a18f-4713-9fd2-55d56e9f72e1/database/BLOG/schema/PUBLIC/table/ETIQUETA">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/ArticuloEtiqueta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+        <state relative-caret-position="102">
+          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding>
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.sql2o/sql2o/1.5.4/be8814367c1f4b0965bbeb605a779f69bd6c3487/sql2o-1.5.4-sources.jar!/org/sql2o/Sql2o.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="224" selection-start-line="224" selection-end-line="224" />
+          <folding>
+            <element signature="e#4182#4183#0" expanded="true" />
+            <element signature="e#4215#4216#0" expanded="true" />
+            <element signature="e#8648#8649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.sql2o/sql2o/1.5.4/be8814367c1f4b0965bbeb605a779f69bd6c3487/sql2o-1.5.4-sources.jar!/org/sql2o/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.sql2o/sql2o/1.5.4/be8814367c1f4b0965bbeb605a779f69bd6c3487/sql2o-1.5.4-sources.jar!/org/sql2o/GenericDatasource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-core/2.7.2/d73bdc786a4b84b5bd2a26206c17c84277e3ccce/spark-core-2.7.2-sources.jar!/spark/http/matching/Body.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-server/9.4.8.v20171121/fef49ac6b2bbc6d142dc0be34f68f0fb0792d52b/jetty-server-9.4.8.v20171121-sources.jar!/org/eclipse/jetty/server/session/SessionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="1584" selection-start-line="1584" selection-end-line="1584" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-core/2.7.2/d73bdc786a4b84b5bd2a26206c17c84277e3ccce/spark-core-2.7.2-sources.jar!/spark/embeddedserver/jetty/JettyHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-core/2.7.2/d73bdc786a4b84b5bd2a26206c17c84277e3ccce/spark-core-2.7.2-sources.jar!/spark/http/matching/MatcherFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://588b8c20-a18f-4713-9fd2-55d56e9f72e1/database/BLOG/schema/PUBLIC/table/ARTICULO">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-core/2.7.2/d73bdc786a4b84b5bd2a26206c17c84277e3ccce/spark-core-2.7.2-sources.jar!/spark/http/matching/RequestWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="240" selection-start-line="240" selection-end-line="240" />
+          <folding>
+            <element signature="e#4928#4929#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/UsuarioServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sparkjava/spark-core/2.7.2/d73bdc786a4b84b5bd2a26206c17c84277e3ccce/spark-core-2.7.2-sources.jar!/spark/TemplateViewRouteImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://588b8c20-a18f-4713-9fd2-55d56e9f72e1/database/BLOG/schema/PUBLIC/table/ARTICULOETIQUETA">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_201/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="975" column="15" selection-start-line="975" selection-start-column="15" selection-end-line="975" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/Etiqueta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <element signature="e#155#156#0" expanded="true" />
+            <element signature="e#195#196#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloEtiquetaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Encapsulacion/Articulo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="58" column="35" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -848,18 +872,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/home.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="27" column="66" lean-forward="true" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
+        <state relative-caret-position="110">
+          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Services/ArticuloServices.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        <state relative-caret-position="187">
+          <caret line="18" column="57" lean-forward="true" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Encapsulacion/ArticuloEtiqueta.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#1272#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Encapsulacion/Comentario.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <folding>
+            <element signature="e#0#1067#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Encapsulacion/Etiqueta.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <folding>
+            <element signature="e#0#521#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Encapsulacion/Usuario.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#1476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pucmm/dhamarmj/Handlers/MainHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="79" column="45" lean-forward="true" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/resources/main/templates/home.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="40" column="70" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/java/main/com/pucmm/dhamarmj/Encapsulacion/Articulo.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
         </state>
       </provider>
     </entry>
