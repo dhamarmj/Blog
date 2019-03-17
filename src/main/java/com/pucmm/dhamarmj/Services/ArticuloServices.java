@@ -15,16 +15,20 @@ public class ArticuloServices {
     private Sql2o db;
     Articulo A = null;
     UsuarioServices usuarioServices;
-    EtiquetaServices etiquetaServices;
-    //    ComentarioServices comentarioServices;
+    EtiquetaServices  etiquetaServices;
 
-
-    public ArticuloServices() {
+//    public  ArticuloServices() {
+//
+//        db = DatabaseServices.getInstancia();
+//        usuarioServices = new UsuarioServices();
+//        etiquetaServices = new EtiquetaServices();
+////        comentarioServices = new ComentarioServices();
+//    }
+    public  ArticuloServices(UsuarioServices us, EtiquetaServices et) {
 
         db = DatabaseServices.getInstancia();
-        usuarioServices = new UsuarioServices();
-        etiquetaServices = new EtiquetaServices();
-//        comentarioServices = new ComentarioServices();
+        usuarioServices = us;
+        etiquetaServices = et;
     }
 
     public List<Articulo> getArticulo() {
@@ -33,8 +37,7 @@ public class ArticuloServices {
             List<Articulo> articles = con.createQuery(sql).executeAndFetch(Articulo.class);
             for (Articulo a :
                     articles) {
-                a.startTeaser();
-                a.setUsuarioautor(usuarioServices.getUsuario(a.getAutor()));
+                InitializeArticle(a);
             }
             Collections.sort(articles, (Articulo p1, Articulo p2) -> p2.getFecha().compareTo(p1.getFecha()));
             return articles;
@@ -44,15 +47,20 @@ public class ArticuloServices {
         }
     }
 
+    private void InitializeArticle(Articulo a) {
+        a.startTeaser();
+        a.setUsuarioautor(usuarioServices.getUsuario(a.getAutor()));
+    }
 
 
-
-    public Articulo getArticulo(int idarticulo) {
+    public Articulo getArticulo(long idarticulo) {
         String sql = "select * from Articulo where id = :idarticulo";
         try (Connection con = db.open()) {
-            return con.createQuery(sql)
+            Articulo a= con.createQuery(sql)
                     .addParameter("idarticulo", idarticulo)
                     .executeAndFetchFirst(Articulo.class);
+            InitializeArticle(a);
+            return a;
         } catch (Exception ex) {
             System.out.println("Get Articulo error: " + ex.toString());
             return null;
@@ -62,9 +70,11 @@ public class ArticuloServices {
     public Articulo getArticulo(String title) {
         String sql = "select * from Articulo where titulo = :title";
         try (Connection con = db.open()) {
-            return con.createQuery(sql)
+            Articulo a= con.createQuery(sql)
                     .addParameter("title", title)
                     .executeAndFetchFirst(Articulo.class);
+            InitializeArticle(a);
+            return a;
         } catch (Exception ex) {
             System.out.println("Get Articulo error: " + ex);
             return null;
@@ -96,13 +106,11 @@ public class ArticuloServices {
     }
 
     public boolean updateArticulo(Articulo articulo) {
-        String sql = "update Articulo set titulo=:titulo, texto:cuerpo, autor=:autor, fecha=:fecha where id=:id";
+        String sql = "update Articulo set titulo=:titulo, texto=:cuerpo where id=:id";
         try (Connection con = db.open()) {
             con.createQuery(sql)
                     .addParameter("titulo", articulo.getTitulo())
                     .addParameter("cuerpo", articulo.getTexto())
-                    .addParameter("autor", articulo.getAutor())
-                    .addParameter("fecha", articulo.getFecha())
                     .addParameter("id", articulo.getId())
                     .executeUpdate();
             return true;
@@ -113,11 +121,12 @@ public class ArticuloServices {
 
     }
 
-    public boolean deleteArticulo(int id) {
+    public boolean deleteArticulo(long id) {
         String sql = "delete from Articulo where id=:id";
         try (Connection con = db.open()) {
             con.createQuery(sql)
-                    .addParameter("id", id);
+                    .addParameter("id", id)
+                    .executeUpdate();
             return true;
         } catch (Exception ex) {
             System.out.println("Delete Articulo error: " + ex.getMessage());

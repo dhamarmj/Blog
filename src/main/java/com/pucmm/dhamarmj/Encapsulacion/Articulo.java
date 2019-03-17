@@ -15,7 +15,7 @@ public class Articulo {
     private List<Etiqueta> listaEtiquetas;
     private Usuario usuarioautor;
     private String teaser;
-    private String stringEtiqueta;
+    private String stringEtiqueta = "";
 
     public Articulo(String titulo, String cuerpo, Date fecha, List<Comentario> listaComentarios, List<Etiqueta> listaEtiquetas, Usuario user) {
         this.titulo = titulo;
@@ -26,18 +26,22 @@ public class Articulo {
         this.usuarioautor = user;
         this.autor = user.getId();
         startTeaser();
-        startEtiquetasString();
+        this.stringEtiqueta = startEtiquetasString();
     }
 
-    public void startEtiquetasString() {
-        stringEtiqueta ="";
-        for (Etiqueta etiqueta:
-             listaEtiquetas) {
-            stringEtiqueta += etiqueta.getEtiqueta() + ", ";
+    public String startEtiquetasString() {
+        String value = "";
+        if (listaEtiquetas == null || listaEtiquetas.size() == 0)
+            return value;
+
+        for (Etiqueta etiqueta :
+                listaEtiquetas) {
+            value += etiqueta.getEtiqueta() + ", ";
         }
+        return value.substring(0, value.length() - 2);
     }
 
-     public void startTeaser() {
+    public void startTeaser() {
         if (texto.length() > 160)
             this.teaser = this.texto.substring(0, 160);
         else
@@ -54,8 +58,9 @@ public class Articulo {
         this.usuarioautor = user;
         this.autor = usuarioautor.getId();
         startTeaser();
-        stringEtiqueta="";
+        this.stringEtiqueta = startEtiquetasString();
     }
+
     public String getStringEtiqueta() {
         return stringEtiqueta;
     }
@@ -71,12 +76,14 @@ public class Articulo {
     public void setTeaser(String teaser) {
         this.teaser = teaser;
     }
+
     public void setListaComentarios(List<Comentario> listaComentarios) {
         this.listaComentarios = listaComentarios;
     }
 
     public void setListaEtiquetas(List<Etiqueta> listaEtiquetas) {
         this.listaEtiquetas = listaEtiquetas;
+        this.stringEtiqueta = startEtiquetasString();
     }
 
     public Usuario getUsuarioautor() {
@@ -89,10 +96,6 @@ public class Articulo {
 
     public long getId() {
         return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getTitulo() {
@@ -134,12 +137,12 @@ public class Articulo {
     public void setListaComentarios(ArrayList<Comentario> listaComentarios) {
         this.listaComentarios = listaComentarios;
     }
-
     public List<Etiqueta> getListaEtiquetas() {
         return listaEtiquetas;
     }
 
     public void setListaEtiquetas(ArrayList<Etiqueta> listaEtiquetas) {
         this.listaEtiquetas = listaEtiquetas;
+        this.stringEtiqueta = startEtiquetasString();
     }
 }

@@ -2,7 +2,6 @@ package com.pucmm.dhamarmj.Handlers;
 
 import com.pucmm.dhamarmj.Encapsulacion.*;
 import com.pucmm.dhamarmj.Services.*;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import freemarker.template.Configuration;
 import spark.ModelAndView;
 import spark.Request;
@@ -10,13 +9,8 @@ import spark.Session;
 import spark.Spark;
 import spark.template.freemarker.FreeMarkerEngine;
 
-import javax.crypto.Cipher;
-import javax.crypto.spec.SecretKeySpec;
-import java.sql.Time;
 import java.util.*;
-import java.security.Key;
-import javax.crypto.Cipher;
-import javax.crypto.spec.SecretKeySpec;
+
 
 import static spark.Spark.*;
 
@@ -25,13 +19,12 @@ public class MainHandler {
     public void mainHandler() {
 
         encryption = new Encryption();
-        articuloServices = new ArticuloServices();
         usuarioServices = new UsuarioServices();
-        comentarioServices = new ComentarioServices();
         etiquetaServices = new EtiquetaServices();
-        articuloEtiquetaService = new ArticuloEtiquetaService();
+        comentarioServices = new ComentarioServices(usuarioServices);
+        articuloEtiquetaService = new ArticuloEtiquetaService(etiquetaServices, articuloServices);
+        articuloServices = new ArticuloServices(usuarioServices, etiquetaServices);
         startup();
-
     }
 
     ArticuloServices articuloServices;
@@ -51,12 +44,9 @@ public class MainHandler {
         configuration.setClassForTemplateLoading(MainHandler.class, "/templates");
         FreeMarkerEngine freeMarkerEngine = new FreeMarkerEngine(configuration);
 
-
         get("/Home/", (request, response) -> {
-            Map<String, Object> attributes = new HashMap<>();
-
-            List<Articulo> Articles = articuloServices.getArticulo();
-            LoadEtiquetas(Articles);
+            List<Articulo> articulo = articuloServices.getArticulo();
+            LoadEtiquetas(articulo);
             String user = request.cookie("LoginU");
             if (user != null) {
                 String passw = encryption.Decrypt(request.cookie("LoginP"));
@@ -65,16 +55,65 @@ public class MainHandler {
                 CreateSession(request, currentUser);
             }
             currentUser = getSessionUsuario(request);
+            Map<String, Object> attributes = validateUSer();
             if (currentUser != null) {
-                attributes = validateUSer();
-                attributes.put("userSigned", true);
+                attributes.put("currentUserId", String.valueOf(currentUser.getId()));
             } else {
-                attributes.put("usuario", "other");
-                attributes.put("userSigned", false);
+                attributes.put("currentUserId", "0");
             }
-            attributes.put("list", Articles);
+            attributes.put("list", articulo);
             return new ModelAndView(attributes, "home.ftl");
         }, freeMarkerEngine);
+
+        get("/Post/:idpost", (request, response) -> {
+            Map<String, Object> attributes = getArticle(request);
+            return new ModelAndView(attributes, "articleDetail.ftl");
+        }, freeMarkerEngine);
+
+        post("/sendComment/:idpost", (request, response) -> {
+            Articulo Ar = articuloServices.getArticulo(Integer.parseInt(request.params("idpost")));
+            Comentario C = new Comentario(request.queryParams("comment").trim(),
+                    currentUser, Ar);
+            comentarioServices.crearComentario(C);
+            response.redirect("/Post/"+Ar.getId());
+            return null;
+        }, freeMarkerEngine);
+
+        get("/Admin/Modify/:idpost", (request, response) -> {
+            Map<String, Object> attributes = getArticle(request);
+            attributes.remove("list");
+            return new ModelAndView(attributes, "modifyPost.ftl");
+        }, freeMarkerEngine);
+        get("/Author/Modify/:idpost", (request, response) -> {
+            Map<String, Object> attributes = getArticle(request);
+            attributes.remove("list");
+            return new ModelAndView(attributes, "modifyPost.ftl");
+        }, freeMarkerEngine);
+
+        post("/updateArticle/:idpost", (request, response) -> {
+            Map<String, Object> attributes = validateUSer();
+            Articulo Ar = articuloServices.getArticulo(Integer.parseInt(request.params("idpost")));
+            Ar.setCuerpo(request.queryParams("body"));
+            Ar.setTitulo(request.queryParams("title"));
+            Ar.startTeaser();
+            LoadEtiquetasInArticulo(Ar);
+
+            if (Ar != null)
+                Ar.setListaEtiquetas(ModifyEtiquetasFromArticle(Ar, request.queryParams("etiquetas")));
+
+            articuloServices.updateArticulo(Ar);
+            response.redirect("/Home/");
+            return null;
+        }, freeMarkerEngine);
+
+//        get("/deleteArticle/:idpost", (request, response) -> {
+//            Map<String, Object> attributes = validateUSer();
+//            Articulo Ar = articuloServices.getArticulo(Integer.parseInt(request.params("idpost")));
+//            ModifyEtiquetasFromArticle(Ar, "");
+//            articuloServices.deleteArticulo(Ar.getId());
+//            response.redirect("/Home/");
+//            return null;
+//        }, freeMarkerEngine);
 
         before("/Admin/*", (request, response) -> {
             Usuario usuario = request.session().attribute("usuario");
@@ -97,8 +136,7 @@ public class MainHandler {
             }
         });
         get("/LogIn/", (request, response) -> {
-            Map<String, Object> attributes = new HashMap<>();
-            return new ModelAndView(attributes, "signIn.ftl");
+            return new ModelAndView(null, "signIn.ftl");
         }, freeMarkerEngine);
 
         post("/logInUser/", (request, response) -> {
@@ -142,6 +180,15 @@ public class MainHandler {
             return new ModelAndView(attributes, "compose.ftl");
         }, freeMarkerEngine);
 
+        get("/removeArticle/:idpost", (request, response) -> {
+            Articulo art = articuloServices.getArticulo(Integer.parseInt(request.params("idpost")));
+            comentarioServices.deleteComentario(art);
+            articuloEtiquetaService.deleteArticuloEtiqueta(art);
+            articuloServices.deleteArticulo(art.getId());
+            response.redirect("/Home/");
+            return null;
+        }, freeMarkerEngine);
+
         post("/saveArticle/", (request, response) -> {
             List<Etiqueta> listE = getEtiquetas(request.queryParams("etiquetas"));
             Articulo Art = new Articulo(request.queryParams("title"),
@@ -151,13 +198,15 @@ public class MainHandler {
                     listE,
                     currentUser);
             Articulo a = articuloServices.crearArticulo(Art);
-            if (a != null) {
+            if (a != null && listE != null) {
                 saveEtiquetaArticulo(a, listE);
             }
 
             response.redirect("/Home/");
             return null;
         }, freeMarkerEngine);
+
+
 
         get("/LogOut/", (request, response) -> {
             request.session().removeAttribute("usuario");
@@ -170,9 +219,32 @@ public class MainHandler {
 
     }
 
+    private Map<String, Object> getArticle(Request request) {
+        Map<String, Object> attributes = validateUSer();
+        Articulo Ar = articuloServices.getArticulo(Integer.parseInt(request.params("idpost")));
+        Ar.setListaComentarios(comentarioServices.getComentario(Ar));
+        LoadEtiquetasInArticulo(Ar);
+        attributes.put("articulo", Ar);
+        attributes.put("list", Ar.getListaComentarios());
+        return attributes;
+    }
+
     private void CreateSession(Request request, Usuario user) {
         Session session = request.session(true);
         session.attribute("usuario", user);
+    }
+
+    private List<Etiqueta> ModifyEtiquetasFromArticle(Articulo A, String values) {
+        if (values.isEmpty()) {
+            if (A.getListaEtiquetas() != null)
+                articuloEtiquetaService.deleteArticuloEtiqueta(A);
+            return null;
+        } else {
+            articuloEtiquetaService.deleteArticuloEtiqueta(A);
+            List<Etiqueta> valuesEtiquetas = getEtiquetas(values);
+            saveEtiquetaArticulo(A, valuesEtiquetas);
+            return valuesEtiquetas;
+        }
     }
 
     private Usuario getSessionUsuario(Request request) {
@@ -181,6 +253,12 @@ public class MainHandler {
 
     private Map<String, Object> validateUSer() {
         Map<String, Object> attributes = new HashMap<>();
+        if (currentUser == null) {
+            attributes.put("usuario", "other");
+            attributes.put("userSigned", false);
+            return attributes;
+        }
+
         if (currentUser.isAdmin()) {
             attributes.put("usuario", "admin");
         } else if (currentUser.isAutor()) {
@@ -188,6 +266,7 @@ public class MainHandler {
         } else {
             attributes.put("usuario", "visitor");
         }
+        attributes.put("userSigned", true);
         return attributes;
     }
 
@@ -213,22 +292,37 @@ public class MainHandler {
         }
     }
 
-    private void LoadEtiquetas(List<Articulo> ListArticles) {
-        List<ArticuloEtiqueta> ae;
+    private void LoadEtiquetasInArticulo(Articulo articulo) {
+        List<ArticuloEtiqueta> ae = articuloEtiquetaService.getArticuloEtiqueta(articulo);
         List<Etiqueta> et;
+        if (ae == null || ae.size() == 0)
+            articulo.setListaEtiquetas(new ArrayList<>());
+        else {
+            et = new ArrayList<>();
+            for (ArticuloEtiqueta artEt :
+                    ae) {
+                et.add(artEt.getEtiqueta());
+            }
+            articulo.setListaEtiquetas(et);
+        }
+
+    }
+
+    private void LoadEtiquetas(List<Articulo> ListArticles) {
         for (Articulo article :
                 ListArticles) {
-            ae = articuloEtiquetaService.getArticuloEtiqueta(article);
-            if (ae == null || ae.size() == 0)
-                article.setListaEtiquetas(new ArrayList<>());
-            else {
-                et = new ArrayList<>();
-                for (ArticuloEtiqueta artEt :
-                        ae) {
-                    et.add(artEt.getEtiqueta());
-                }
-                article.setListaEtiquetas(et);
-            }
+            LoadEtiquetasInArticulo(article);
         }
     }
+    private List<Comentario> LoadComentToArticle(Articulo articulo){
+        List<Comentario> comments = comentarioServices.getComentario(articulo);
+        for (Comentario c:
+           comments) {
+           c.setArticuloComentario(articulo);
+           c.setUsuarioAutor(usuarioServices.getUsuario(c.getAutor()));
+        }
+
+        return  comments;
+    }
 }
+

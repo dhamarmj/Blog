@@ -14,20 +14,19 @@ public class UsuarioServices {
 
     public UsuarioServices() {
         db = DatabaseServices.getInstancia();
-        random = new Random();
     }
 
-    public void startUsuarios() {
-        String sql = "delete from Usuario";
-        String passw;
-        try (Connection con = db.open()) {
-            con.createQuery(sql).executeUpdate();
-        }
-        for (int i = 1; i <= 10; i++) {
-            passw = encryptPassword("pass" + i);
-            crearUsuario(new Usuario("username" + i, "nombre" + i, passw, random.nextBoolean(), random.nextBoolean()));
-        }
-    }
+//    public void startUsuarios() {
+//        String sql = "delete from Usuario";
+//        String passw;
+//        try (Connection con = db.open()) {
+//            con.createQuery(sql).executeUpdate();
+//        }
+//        for (int i = 1; i <= 10; i++) {
+//            passw = encryptPassword("pass" + i);
+//            crearUsuario(new Usuario("username" + i, "nombre" + i, passw, random.nextBoolean(), random.nextBoolean()));
+//        }
+//    }
 
     public List<Usuario> getUsuario() {
         String sql = "select * from Usuario";
@@ -50,7 +49,7 @@ public class UsuarioServices {
 
 
 
-    public Usuario getUsuario(int idusuario) {
+    public Usuario getUsuario(long idusuario) {
         String sql = "select * from Usuario where id=:idusuario";
         try (Connection con = db.open()) {
             return con.createQuery(sql)

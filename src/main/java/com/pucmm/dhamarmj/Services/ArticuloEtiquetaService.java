@@ -15,12 +15,16 @@ public class ArticuloEtiquetaService {
     EtiquetaServices etiquetaServices;
     ArticuloServices articuloServices;
 
-    public ArticuloEtiquetaService() {
+//    public ArticuloEtiquetaService() {
+//        db = DatabaseServices.getInstancia();
+//        etiquetaServices = new EtiquetaServices();
+//        articuloServices = new ArticuloServices();
+//    }
+    public ArticuloEtiquetaService(EtiquetaServices et, ArticuloServices ar) {
         db = DatabaseServices.getInstancia();
-        etiquetaServices = new EtiquetaServices();
-        articuloServices = new ArticuloServices();
+        etiquetaServices = et;
+        articuloServices = ar;
     }
-
     public List<ArticuloEtiqueta> getArticuloEtiqueta() {
         String sql = "select * from ArticuloEtiqueta";
         try (Connection con = db.open()) {
@@ -109,7 +113,7 @@ public class ArticuloEtiquetaService {
     }
 
     public boolean updateArticuloEtiqueta(ArticuloEtiqueta etiqueta) {
-        String sql = "update ArticuloEtiqueta set idetiqueta=:idetiqueta, idarticulo=:idarticulo where id=:id";
+        String sql = "update ArticuloEtiqueta set idetiqueta=:idetiqueta, idarticulo=:idarticulo where id=:id;";
         try (Connection con = db.open()) {
             con.createQuery(sql)
                     .addParameter("idetiqueta", etiqueta.getEtiqueta().getId())
@@ -125,10 +129,23 @@ public class ArticuloEtiquetaService {
     }
 
     public boolean deleteArticuloEtiqueta(int id) {
-        String sql = "delete from ArticuloEtiqueta where id=:id";
+        String sql = "DELETE FROM ArticuloEtiqueta where id=:id;";
         try (Connection con = db.open()) {
             con.createQuery(sql)
-                    .addParameter("id", id);
+                    .addParameter("id", id)
+                    .executeUpdate();;
+            return true;
+        } catch (Exception ex) {
+            System.out.println("Delete ArticuloEtiqueta error: " + ex.getMessage());
+            return false;
+        }
+    }
+    public boolean deleteArticuloEtiqueta(Articulo articulo) {
+        String sql = "DELETE FROM ArticuloEtiqueta where IDARTICULO=:idarticulo;";
+        try (Connection con = db.open()) {
+            con.createQuery(sql)
+                    .addParameter("idarticulo", articulo.getId())
+                    .executeUpdate();
             return true;
         } catch (Exception ex) {
             System.out.println("Delete ArticuloEtiqueta error: " + ex.getMessage());
