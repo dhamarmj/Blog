@@ -44,8 +44,10 @@ public class MainHandler {
         configuration.setClassForTemplateLoading(MainHandler.class, "/templates");
         FreeMarkerEngine freeMarkerEngine = new FreeMarkerEngine(configuration);
 
+
         get("/Home/", (request, response) -> {
             List<Articulo> articulo = articuloServices.getArticulo();
+            StartUser();
             LoadEtiquetas(articulo);
             String user = request.cookie("LoginU");
             if (user != null) {
@@ -69,16 +71,14 @@ public class MainHandler {
             Map<String, Object> attributes = getArticle(request);
             return new ModelAndView(attributes, "articleDetail.ftl");
         }, freeMarkerEngine);
-
         post("/sendComment/:idpost", (request, response) -> {
             Articulo Ar = articuloServices.getArticulo(Integer.parseInt(request.params("idpost")));
             Comentario C = new Comentario(request.queryParams("comment").trim(),
                     currentUser, Ar);
             comentarioServices.crearComentario(C);
-            response.redirect("/Post/"+Ar.getId());
+            response.redirect("/Post/" + Ar.getId());
             return null;
         }, freeMarkerEngine);
-
         get("/Admin/Modify/:idpost", (request, response) -> {
             Map<String, Object> attributes = getArticle(request);
             attributes.remove("list");
@@ -89,7 +89,6 @@ public class MainHandler {
             attributes.remove("list");
             return new ModelAndView(attributes, "modifyPost.ftl");
         }, freeMarkerEngine);
-
         post("/updateArticle/:idpost", (request, response) -> {
             Map<String, Object> attributes = validateUSer();
             Articulo Ar = articuloServices.getArticulo(Integer.parseInt(request.params("idpost")));
@@ -105,15 +104,6 @@ public class MainHandler {
             response.redirect("/Home/");
             return null;
         }, freeMarkerEngine);
-
-//        get("/deleteArticle/:idpost", (request, response) -> {
-//            Map<String, Object> attributes = validateUSer();
-//            Articulo Ar = articuloServices.getArticulo(Integer.parseInt(request.params("idpost")));
-//            ModifyEtiquetasFromArticle(Ar, "");
-//            articuloServices.deleteArticulo(Ar.getId());
-//            response.redirect("/Home/");
-//            return null;
-//        }, freeMarkerEngine);
 
         before("/Admin/*", (request, response) -> {
             Usuario usuario = request.session().attribute("usuario");
@@ -138,7 +128,6 @@ public class MainHandler {
         get("/LogIn/", (request, response) -> {
             return new ModelAndView(null, "signIn.ftl");
         }, freeMarkerEngine);
-
         post("/logInUser/", (request, response) -> {
             Usuario user = usuarioServices.getUsuario(request.queryParams("username"), request.queryParams("password"), true);
             if (user != null) {
@@ -154,12 +143,10 @@ public class MainHandler {
             }
             return null;
         }, freeMarkerEngine);
-
         get("/Admin/CreateUser/", (request, response) -> {
             Map<String, Object> attributes = validateUSer();
             return new ModelAndView(attributes, "createUser.ftl");
         }, freeMarkerEngine);
-
         post("/Admin/saveUser/", (request, response) -> {
             usuarioServices.crearUsuario(new Usuario(request.queryParams("name"),
                     request.queryParams("username"),
@@ -169,17 +156,14 @@ public class MainHandler {
             response.redirect("/Home/");
             return null;
         }, freeMarkerEngine);
-
         get("/Admin/Compose/", (request, response) -> {
             Map<String, Object> attributes = validateUSer();
             return new ModelAndView(attributes, "compose.ftl");
         }, freeMarkerEngine);
-
         get("/Author/Compose/", (request, response) -> {
             Map<String, Object> attributes = validateUSer();
             return new ModelAndView(attributes, "compose.ftl");
         }, freeMarkerEngine);
-
         get("/removeArticle/:idpost", (request, response) -> {
             Articulo art = articuloServices.getArticulo(Integer.parseInt(request.params("idpost")));
             comentarioServices.deleteComentario(art);
@@ -188,7 +172,6 @@ public class MainHandler {
             response.redirect("/Home/");
             return null;
         }, freeMarkerEngine);
-
         post("/saveArticle/", (request, response) -> {
             List<Etiqueta> listE = getEtiquetas(request.queryParams("etiquetas"));
             Articulo Art = new Articulo(request.queryParams("title"),
@@ -201,13 +184,9 @@ public class MainHandler {
             if (a != null && listE != null) {
                 saveEtiquetaArticulo(a, listE);
             }
-
             response.redirect("/Home/");
             return null;
         }, freeMarkerEngine);
-
-
-
         get("/LogOut/", (request, response) -> {
             request.session().removeAttribute("usuario");
             request.session().invalidate();
@@ -314,15 +293,27 @@ public class MainHandler {
             LoadEtiquetasInArticulo(article);
         }
     }
-    private List<Comentario> LoadComentToArticle(Articulo articulo){
+
+    private List<Comentario> LoadComentToArticle(Articulo articulo) {
         List<Comentario> comments = comentarioServices.getComentario(articulo);
-        for (Comentario c:
-           comments) {
-           c.setArticuloComentario(articulo);
-           c.setUsuarioAutor(usuarioServices.getUsuario(c.getAutor()));
+        for (Comentario c :
+                comments) {
+            c.setArticuloComentario(articulo);
+            c.setUsuarioAutor(usuarioServices.getUsuario(c.getAutor()));
         }
 
-        return  comments;
+        return comments;
+    }
+
+    private void StartUser() {
+        Usuario a = usuarioServices.getUsuario().get(0);
+        if (a == null) {
+            usuarioServices.crearUsuario(new Usuario("admin",
+                    "admin",
+                    UsuarioServices.encryptPassword("admin"),
+                    true,
+                    true));
+        }
     }
 }
 

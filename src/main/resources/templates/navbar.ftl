@@ -25,15 +25,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/Home/">Home</a>
                 </li>
-               <#if usuario=="author">
-                   <li class="nav-item">
-                       <a class="nav-link" href="/Author/Compose/">Compose</a>
-                   </li>
-                   <#elseif  usuario=="admin">
-                       <li class="nav-item">
-                           <a class="nav-link" href="/Admin/Compose/">Compose</a>
-                       </li>
-               </#if>
+                <#if usuario=="author">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Author/Compose/">Compose</a>
+                    </li>
+                <#elseif  usuario=="admin">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Admin/Compose/">Compose</a>
+                    </li>
+                </#if>
                 <#if usuario=="admin">
                     <li class="nav-item">
                         <a class="nav-link" href="/Admin/CreateUser/">Register User</a>

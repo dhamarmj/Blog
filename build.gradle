@@ -16,8 +16,6 @@ apply plugin: 'com.github.johnrengelman.shadow'
 sourceCompatibility = 1.8
 mainClassName = "com.pucmm.dhamarmj.Main"
 
-
-
 repositories {
     mavenCentral()
 }

@@ -18,16 +18,6 @@ public class ComentarioServices {
         usuarioServices = us;
     }
 
-    public void startComentarios() {
-        String sql = "delete from Comentario";
-        try (Connection con = db.open()) {
-            con.createQuery(sql).executeUpdate();
-        }
-//        for (int i=1; i<=10;i++){
-//            crearComentario(new Comentario("comment" + i,i, i));
-//        }
-    }
-
     public List<Comentario> getComentario() {
         String sql = "select * from Comentario";
         try (Connection con = db.open()) {
